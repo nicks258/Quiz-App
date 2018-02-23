@@ -1,0 +1,20 @@
+<resources>
+  <string name="app_name">Kiosk Quiz</string>
+  <string name="international_women_s_day_2018">International Women’s Day 2018</string>
+  <string name="gettingtoequal">#GettingToEqual</string>
+  <string name="participate_in_a_simple_5_step_quiz_and_stand_a_chance_to_win_vouchers">Participate in a simple 5 step quiz and stand a chance to win vouchers!*</string>
+  <string name="fill_in_on_the_gettingtoequal_app">Fill in on the #GettingToEqual app</string>
+  <string name="there_will_be_a_total_of_5_questions">There will be a total of 5 questions</string>
+  <string name="answer_all_the_questions_correctly_to_win_the_voucher">Answer all the questions correctly to win the voucher</string>
+  <string name="give_consent_for_the_clicking_of_my_picture_for_the_purposes_mentioned_hereinabove_by_accenture"><![CDATA[Give consent for the clicking of my picture for the purposes mentioned hereinabove by Accenture.]]></string>
+  <string name="declare_that_the_aforementioned_consent_has_been_provided_by_me_freely_without_any_kind_of_pressure_or_coercion">Declare that the aforementioned consent has been provided by me freely without any kind of pressure or coercion</string>
+  <string name="fully_understand_that_the_said_information_will_be_used_in_accordance_with_accenture_s_data_privacy_policy_90_and_accenture_india_supplement_to_data_privacy_policy_90_and_solely_for_the_purpose_set_out_above">Fully understand that the said information will be used in accordance with Accenture’s Data Privacy Policy 90 and Accenture India Supplement to Data Privacy Policy 90 and solely for the purpose set out above.</string>
+  <string name="understand_that_accenture_shall_use_reasonable_measures_taking_account_of_evolving_technology_and_risks_to_keep_the_information_so_collected_secure_and_shall_hold_the_information_only_for_as_long_as_necessary_to_achieve_the_purpose_mentioned_in_the_agreement"><![CDATA[Understand that Accenture, shall use reasonable measures, taking account of evolving technology and risks, to keep the information so collected secure, and shall hold the information only for as long as necessary to achieve the purpose mentioned in the Agreement.]]></string>
+  <string name="understand_that_such_data_once_collected_can_only_be_used_for_the_stated_purpose_s_set_out_here_in_below"><![CDATA[Understand that such data once collected can only be used for the stated purpose set out here in below.]]></string>
+  <string name="understand_that_this_is_appropriate_and_necessary_data_being_collected_by_velocity_for_usage_by_accenture_this_will_not_be_shared_for_any_purposes_with_any_third_party">Understand that this is appropriate and necessary data being collected by VELOCITY for usage by Accenture. This will not be shared for any purposes with any third party.</string>
+  <string name="by_sharing_my_details_i_agree_in_my_own_right_to_the_processing_of_the_information_by_accenture_for_purposes_i_understand_that_such_processing_will_be_carried_out_in_accordance_with_local_data_privacy_laws_and_accenture_s_policy_90_which_together_regulate_the_way_in_which_accenture_collects_and_uses_personal_data_and_my_rights_to_access_and_correct_my_data"><![CDATA[By sharing my details I agree in my own right to the processing of the information by Accenture for purposes.  I understand that such processing will be carried out in accordance with local data privacy laws and Accenture’s Policy 90, which together regulate the way in which Accenture collects and uses personal data and my rights to access and correct my data.]]></string>
+  <string name="submit_continue"><![CDATA[Accept & Continue]]></string>
+  <string name="name">Name</string>
+  <string name="email">Email</string>
+  <string name="start">START</string>
+</resources>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".WelcomeActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/title"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="#963FBF"
+            android:textSize="25sp"
+            android:paddingTop="20sp"
+            android:gravity="center"
+            android:paddingEnd="20sp"
+            android:text="@string/international_women_s_day_2018"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="#963FBF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:paddingStart="110sp"
+            android:paddingEnd="90sp"
+            android:text="@string/gettingtoequal"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/paticipate_layout"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20sp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="#A64B24"
+            android:textSize="20sp"
+            android:id="@+id/prize"
+            android:padding="10sp"
+            android:layout_height="wrap_content"
+            android:text="CONSENT FORM"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/prize"
+            android:id="@+id/linear1"
+            android:paddingStart="10sp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/number_1"
+                android:textColor="#AF7D64"
+                android:text="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/consent1"
+                android:textColor="#AF7D64"
+                android:paddingStart="10sp"
+                android:paddingEnd="10sp"
+                android:text="@string/give_consent_for_the_clicking_of_my_picture_for_the_purposes_mentioned_hereinabove_by_accenture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/linear2"
+            android:paddingTop="10sp"
+            android:layout_below="@+id/linear1"
+            android:paddingStart="10sp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/number_2"
+                android:textColor="#AF7D64"
+                android:text="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/consent2"
+                android:textColor="#AF7D64"
+                android:paddingStart="10sp"
+                android:paddingEnd="10sp"
+                android:text="@string/understand_that_this_is_appropriate_and_necessary_data_being_collected_by_velocity_for_usage_by_accenture_this_will_not_be_shared_for_any_purposes_with_any_third_party"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/linear2"
+            android:paddingTop="10sp"
+            android:id="@+id/linear3"
+            android:paddingStart="10sp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/number_3"
+                android:textColor="#AF7D64"
+                android:text="3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/consent3"
+                android:textColor="#AF7D64"
+                android:paddingStart="10sp"
+                android:paddingEnd="10sp"
+                android:text="@string/understand_that_such_data_once_collected_can_only_be_used_for_the_stated_purpose_s_set_out_here_in_below"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/linear4"
+            android:paddingTop="10sp"
+            android:layout_below="@+id/linear3"
+            android:paddingStart="10sp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/number_4"
+                android:textColor="#AF7D64"
+                android:text="4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/consent4"
+                android:textColor="#AF7D64"
+                android:paddingEnd="10sp"
+                android:paddingStart="10sp"
+                android:text="@string/understand_that_accenture_shall_use_reasonable_measures_taking_account_of_evolving_technology_and_risks_to_keep_the_information_so_collected_secure_and_shall_hold_the_information_only_for_as_long_as_necessary_to_achieve_the_purpose_mentioned_in_the_agreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="10sp"
+            android:id="@+id/linear5"
+            android:layout_below="@+id/linear4"
+            android:paddingStart="10sp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/number_5"
+                android:textColor="#AF7D64"
+                android:text="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/consent5"
+                android:textColor="#AF7D64"
+                android:paddingStart="10sp"
+                android:paddingEnd="10sp"
+                android:text="@string/fully_understand_that_the_said_information_will_be_used_in_accordance_with_accenture_s_data_privacy_policy_90_and_accenture_india_supplement_to_data_privacy_policy_90_and_solely_for_the_purpose_set_out_above"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/linear6"
+            android:orientation="horizontal"
+            android:paddingTop="10sp"
+            android:layout_below="@+id/linear5"
+            android:paddingStart="10sp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/number_6"
+                android:textColor="#AF7D64"
+                android:text="6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/consent6"
+                android:textColor="#AF7D64"
+                android:paddingStart="10sp"
+                android:paddingEnd="10sp"
+                android:text="@string/declare_that_the_aforementioned_consent_has_been_provided_by_me_freely_without_any_kind_of_pressure_or_coercion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/linear6"
+            android:gravity="center"
+            android:paddingStart="30sp"
+            android:paddingEnd="30sp"
+            android:paddingTop="50sp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="#AF7D64"
+                android:layout_height="wrap_content"
+                android:text="@string/by_sharing_my_details_i_agree_in_my_own_right_to_the_processing_of_the_information_by_accenture_for_purposes_i_understand_that_such_processing_will_be_carried_out_in_accordance_with_local_data_privacy_laws_and_accenture_s_policy_90_which_together_regulate_the_way_in_which_accenture_collects_and_uses_personal_data_and_my_rights_to_access_and_correct_my_data"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30sp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="@string/submit_continue"
+                android:textSize="30sp"
+                android:id="@+id/accept_button"
+                android:layout_marginStart="10sp"
+                android:layout_marginBottom="30sp"
+                android:layout_marginEnd="10sp"
+                android:background="@drawable/button_background"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
