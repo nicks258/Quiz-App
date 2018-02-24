@@ -17,4 +17,7 @@
   <string name="name">Name</string>
   <string name="email">Email</string>
   <string name="start">START</string>
+  <string name="error">Check your name/email</string>
+  <string name="longer_positive">Okay</string>
+    <string name="submit_my_entery">Submit my entry</string>
 </resources>

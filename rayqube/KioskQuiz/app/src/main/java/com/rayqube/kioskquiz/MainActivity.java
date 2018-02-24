@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
   Button butNext;
   RequestQueue queue;
   DbHelper helper;
+  String name,emailId;
   ProgressBar progressBar;
   private int progressStatus = 0;
   private TextView textView;
@@ -62,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
 ////    setSupportActionBar(toolbar);
     queue = Volley.newRequestQueue(this);
     progressBar = findViewById(R.id.progressBar);
-
+    Intent getIntent = getIntent();
+    name = getIntent.getStringExtra("NAME");
+    emailId = getIntent.getStringExtra("EMAIL_ID");
     DbHelper dbHelper = new DbHelper(this);
     questionList = dbHelper.getAllQuestions();
     textView = (TextView) findViewById(R.id.textView);
@@ -104,6 +107,8 @@ public class MainActivity extends AppCompatActivity {
       Intent intent = new Intent(MainActivity.this, ResultActivity.class);
       Bundle b = new Bundle();
       b.putInt("score",score);
+      b.putString("NAME",name);
+      b.putString("EMAIL_ID",emailId);
       intent.putExtras(b);
       startActivity(intent);
       finish();

@@ -19,7 +19,7 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final int DB_VERSION = 2;
     private static final String DB_NAME = "quizdb";
     private static final String DB_TABLE = "quiztable";
-
+    private static final String DB_TABLE1 = "scoretable";
     //table column names
     private static final String KEY_ID = "id";
     private static final String KEY_QUES = "question";
@@ -29,7 +29,10 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String KEY_OPTC = "optC";
     private static final String KEY_OPTD = "optD";
     private static final String KEY_OPTE = "optE";
-
+    private static final String KEY_NAME = "name";
+    private static final String KEY_MAILID = "mailID";
+    private static final String KEY_SCORE = "score";
+    private static final String KEY_TIME = "time";
     private SQLiteDatabase dbase;
     private int rowCount = 0;
 
@@ -42,6 +45,10 @@ public class DbHelper extends SQLiteOpenHelper {
         dbase = db;
         String sqlQuery = String.format("CREATE TABLE IF NOT EXISTS %s ( %s INTEGER PRIMARY KEY AUTOINCREMENT, %s TEXT, %s TEXT, %s TEXT, %s TEXT, %s TEXT, %s TEXT, %s TEXT )", DB_TABLE, KEY_ID, KEY_QUES, KEY_ANSWER, KEY_OPTA, KEY_OPTB, KEY_OPTC,KEY_OPTD,KEY_OPTE);
         Log.d("TaskDBHelper", "Query to form table" + sqlQuery);
+
+        String sqlQuery1 = String.format("CREATE TABLE IF NOT EXISTS %s ( %s INTEGER PRIMARY KEY AUTOINCREMENT, %s TEXT, %s TEXT, %s TEXT , %s TEXT )", DB_TABLE1, KEY_ID, KEY_NAME, KEY_MAILID, KEY_SCORE,KEY_TIME);
+        Log.d("TaskDBHelper", "Query to form table" + sqlQuery);
+        db.execSQL(sqlQuery1);
         db.execSQL(sqlQuery);
 //        addQuestions();
     }
@@ -101,6 +108,17 @@ public class DbHelper extends SQLiteOpenHelper {
         values.put(KEY_OPTD,q.getOptD());
         values.put(KEY_OPTE,q.getOptE());
         db.insert(DB_TABLE, null, values);
+        db.close();
+    }
+
+    public void addScoreDetail(People people){
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_NAME, people.getName());
+        values.put(KEY_MAILID,people.getMailId());
+        values.put(KEY_SCORE,people.getScore());
+        values.put(KEY_TIME,people.getTime());
+        db.insert(DB_TABLE1, null, values);
         db.close();
     }
 
