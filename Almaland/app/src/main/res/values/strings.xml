@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Almaland</string>
+    <string name="title_home">Home</string>
+    <string name="title_connections">Connections</string>
+    <string name="title_message">Message</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="description">"30 years of Cirque du Soleil's best photos"</string>
+    <string name="discovery">"\"Science is a beautiful and emotional human endeavor,\" says Brannon Braga, executive producer and director. \"And Cosmos is all about making science an experience.\""</string>
+    <string name="title_jobs">Jobs</string>
+    <string-array name="query_suggestions">
+        <item>Android</item>
+        <item>iOS</item>
+        <item>SCALA</item>
+        <item>Ruby</item>
+        <item>JavaScript</item>
+    </string-array>
+    <string name="intel_description">Intel Corporation (also known as Intel, stylized as intel) is an American multinational corporation and technology company headquartered in Santa Clara, California, in the Silicon Valley. It is the world's second largest and second highest valued semiconductor chip makers based on revenue after being overtaken by Samsung,[2][3] and is the inventor of the x86 series of microprocessors, the processors found in most personal computers (PCs). Intel supplies processors for computer system manufacturers such as Apple, Lenovo, HP, and Dell. Intel also manufactures motherboard chipsets, network interface controllers and integrated circuits, flash memory, graphics chips, embedded processors and other devices related to communications and computing.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="number_of_contacts">1,327</string>
+</resources>

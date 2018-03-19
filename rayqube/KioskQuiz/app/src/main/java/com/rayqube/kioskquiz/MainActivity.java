@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
   Question currentQuestion;
   String url = "http://rayqube.com/projects/kiosk_quiz/rest/getquestion";
   TextView txtQuestion;
-  RadioButton rda,rdb,rdc,rdd;
+  RadioButton rda,rdb,rdc,rdd,rde;
   Button butNext;
   RequestQueue queue;
   DbHelper helper;
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     DbHelper dbHelper = new DbHelper(this);
     questionList = dbHelper.getAllQuestions();
     textView = (TextView) findViewById(R.id.textView);
-    Collections.shuffle(questionList);
+//    Collections.shuffle(questionList);
     currentQuestion = questionList.get(quid);
     dbHelper = new DbHelper(MainActivity.this);
     Logger.addLogAdapter(new AndroidLogAdapter());
@@ -78,6 +78,12 @@ public class MainActivity extends AppCompatActivity {
     rdb     = findViewById(R.id.radio1);
     rdc     = findViewById(R.id.radio2);
     rdd     = findViewById(R.id.radio3);
+    rde     = findViewById(R.id.radio4);
+    rda.setChecked(false);
+    rdb.setChecked(false);
+    rdc.setChecked(false);
+    rdd.setChecked(false);
+    rde.setChecked(false);
     butNext = findViewById(R.id.button1);
     setQuestionView();
 
@@ -89,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
     rdb.setText(currentQuestion.getOptB());
     rdc.setText(currentQuestion.getOptC());
     rdd.setText(currentQuestion.getOptD());
+    rde.setText(currentQuestion.getOptE());
     quid++;
   }
 
@@ -97,7 +104,13 @@ public class MainActivity extends AppCompatActivity {
     RadioButton answer = (RadioButton)findViewById(grp.getCheckedRadioButtonId());
     if(currentQuestion.getAnswer().equals(answer.getText())){
       score++;
+      grp.clearCheck();
+      answer.setChecked(false);
       Log.d("Score", "Your score: "+score);
+    }
+    else {
+      grp.clearCheck();
+      answer.setChecked(false);
     }
 
     if(quid<5){

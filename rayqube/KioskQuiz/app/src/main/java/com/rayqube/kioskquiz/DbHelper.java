@@ -43,7 +43,7 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         dbase = db;
-        String sqlQuery = String.format("CREATE TABLE IF NOT EXISTS %s ( %s INTEGER PRIMARY KEY AUTOINCREMENT, %s TEXT, %s TEXT, %s TEXT, %s TEXT, %s TEXT, %s TEXT, %s TEXT )", DB_TABLE, KEY_ID, KEY_QUES, KEY_ANSWER, KEY_OPTA, KEY_OPTB, KEY_OPTC,KEY_OPTD,KEY_OPTE);
+        String sqlQuery = String.format("CREATE TABLE IF NOT EXISTS %s ( %s INTEGER PRIMARY KEY AUTOINCREMENT, %s TEXT UNIQUE , %s TEXT UNIQUE, %s TEXT UNIQUE, %s TEXT UNIQUE, %s TEXT UNIQUE, %s TEXT UNIQUE, %s TEXT )", DB_TABLE, KEY_ID, KEY_QUES, KEY_ANSWER, KEY_OPTA, KEY_OPTB, KEY_OPTC,KEY_OPTD,KEY_OPTE);
         Log.d("TaskDBHelper", "Query to form table" + sqlQuery);
 
         String sqlQuery1 = String.format("CREATE TABLE IF NOT EXISTS %s ( %s INTEGER PRIMARY KEY AUTOINCREMENT, %s TEXT, %s TEXT, %s TEXT , %s TEXT )", DB_TABLE1, KEY_ID, KEY_NAME, KEY_MAILID, KEY_SCORE,KEY_TIME);
@@ -120,6 +120,27 @@ public class DbHelper extends SQLiteOpenHelper {
         values.put(KEY_TIME,people.getTime());
         db.insert(DB_TABLE1, null, values);
         db.close();
+    }
+
+    public List<People> getPeopleScore(){
+        List<People> peopleList =  new ArrayList<>();
+        dbase = this.getReadableDatabase();
+        String selectQuery = "SELECT * FROM "+DB_TABLE1;
+        Cursor cursor = dbase.rawQuery(selectQuery,null);
+        rowCount = cursor.getCount();
+
+        if(cursor.moveToFirst()){
+            do{
+                People q = new People();
+                q.setName(cursor.getString(cursor.getColumnIndex(KEY_NAME)));
+                q.setMailId(cursor.getString(cursor.getColumnIndex(KEY_MAILID)));
+                q.setScore(cursor.getString(cursor.getColumnIndex(KEY_SCORE)));
+                q.setTime(cursor.getString(cursor.getColumnIndex(KEY_TIME)));
+                peopleList.add(q);
+
+            }while (cursor.moveToNext());
+        }
+        return peopleList;
     }
 
     public List <Question> getAllQuestions(){

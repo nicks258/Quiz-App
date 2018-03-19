@@ -4,79 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
     tools:context=".LoginActivity">
-    <LinearLayout
+    <ImageView
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/title"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="match_parent"
-            android:textColor="#963FBF"
-            android:textSize="25sp"
-            android:paddingTop="20sp"
-            android:gravity="center"
-            android:paddingEnd="20sp"
-            android:text="@string/international_women_s_day_2018"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:layout_width="match_parent"
-            android:textColor="#963FBF"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textSize="25sp"
-            android:paddingStart="110sp"
-            android:paddingEnd="90sp"
-            android:text="@string/gettingtoequal"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/logo"
+        android:contentDescription="@string/logo" />
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100sp"
-        android:layout_marginStart="60sp"
-        android:gravity="center"
-        android:layout_marginEnd="60sp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logo"
+
         android:orientation="vertical"
-        android:layout_marginBottom="50sp"
-        android:background="@drawable/fields">
+        android:background="@drawable/login_back">
         <LinearLayout
             android:layout_width="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="160sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="400sp"
             android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="270sp"
-            android:layout_height="wrap_content"
-            android:textColor="#58AEB7"
-            android:padding="10sp"
-            android:id="@+id/name"
-            android:inputType="textPersonName"
-            android:gravity="center"
-            android:textColorHint="#58AEB7"
-            android:background="@drawable/text_background"
-            android:hint="@string/name" />
-        <EditText
-            android:layout_width="270sp"
-            android:layout_marginTop="30sp"
-            android:layout_height="wrap_content"
-            android:id="@+id/email"
-            android:inputType="textEmailAddress"
-            android:textColor="#58AEB7"
-            android:padding="10sp"
-            android:gravity="center"
-            android:textColorHint="#58AEB7"
-            android:background="@drawable/text_background"
-            android:hint="@string/email" />
-        <Button
-            android:layout_width="270sp"
-            android:background="#fff"
-            android:layout_marginTop="30sp"
-            android:id="@+id/start_button"
-            android:text="@string/start"
-            android:textColor="#58AEB7"
-            android:layout_height="wrap_content" />
+            <EditText
+                android:layout_width="270sp"
+                android:layout_marginTop="30sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/email"
+                android:inputType="textEmailAddress"
+                android:textColor="#58AEB7"
+                android:padding="10sp"
+                android:gravity="center"
+                android:textColorHint="#58AEB7"
+                android:background="#fff"
+                android:hint="@string/email" />
+            <Button
+                android:layout_width="120sp"
+                android:background="@drawable/text_background"
+                android:layout_marginTop="30sp"
+                android:layout_gravity="center"
+                android:id="@+id/start_button"
+                android:text="@string/start"
+                android:textColor="#58AEB7"
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
+    <ProgressBar
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"/>
 </RelativeLayout>

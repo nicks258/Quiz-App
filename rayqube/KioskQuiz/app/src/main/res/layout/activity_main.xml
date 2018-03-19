@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.rayqube.kioskquiz.MainActivity">
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/logo"
+        android:contentDescription="@string/logo" />
     <!--<android.support.design.widget.AppBarLayout-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="wrap_content"-->
@@ -20,8 +27,17 @@
             <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
 
     <!--</android.support.design.widget.AppBarLayout>-->
-
-
+    <ProgressBar
+        android:layout_width="40sp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="40sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/logo"
+        android:layout_height="wrap_content">
     <include layout="@layout/content_main" />
-
-</android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+</RelativeLayout>

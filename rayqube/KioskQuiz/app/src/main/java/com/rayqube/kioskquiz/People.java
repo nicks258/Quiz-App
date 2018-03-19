@@ -24,11 +24,6 @@ public class People {
     public void setScore(String score) {
         this.score = score;
     }
-
-    String name;
-    String mailId;
-    String score;
-
     public String getTime() {
         return time;
     }
@@ -36,6 +31,11 @@ public class People {
     public void setTime(String time) {
         this.time = time;
     }
+    String name;
+    String mailId;
+    String score;
+
+
 
     String time;
 }

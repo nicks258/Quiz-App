@@ -16,6 +16,8 @@
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/arial"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -23,6 +25,8 @@
         android:id="@+id/radioGroup1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="30sp"
+        android:buttonTint="@color/darkOrange"
         android:layout_below="@+id/question">
 
         <RadioButton
@@ -48,6 +52,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Radio Button"/>
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Radio Button"/>
 
     </RadioGroup>
     <Button
@@ -55,9 +64,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Next"
-        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="60sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginStart="60sp"
+        android:background="@drawable/button_background"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/radioGroup1"
         android:onClick="btClick"/>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/button1"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingTop="30sp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:textColor="@color/darkOrange"
+            android:text="@string/disclamer_questios"/>
+    </RelativeLayout>
 
 
 </RelativeLayout>

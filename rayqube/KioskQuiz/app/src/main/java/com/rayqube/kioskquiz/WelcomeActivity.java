@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -24,12 +27,21 @@ public class WelcomeActivity extends AppCompatActivity {
   RequestQueue queue;
   String url = "http://rayqube.com/projects/kiosk_quiz/rest/getquestion";
   DbHelper helper;
+  ImageView loadDatabase;
   ProgressBar progressBar;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_welcome);
     Logger.addLogAdapter(new AndroidLogAdapter());
+    loadDatabase = findViewById(R.id.logo1);
+    loadDatabase.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        progressBar.setVisibility(View.VISIBLE);
+        loadQuestions();
+      }
+    });
 //    setContentView(R.layout.activity_load_question);
     helper = new DbHelper(WelcomeActivity.this);
     queue = Volley.newRequestQueue(this);
@@ -38,12 +50,10 @@ public class WelcomeActivity extends AppCompatActivity {
     startButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        progressBar.setVisibility(View.VISIBLE);
-        loadQuestions();
+        nextPage();
       }
     });
   }
-
   private void nextPage(){
     progressBar.setVisibility(View.GONE);
     Intent disclaimerIntent = new Intent(WelcomeActivity.this,DisclaimerActivity.class);
@@ -81,22 +91,51 @@ public class WelcomeActivity extends AppCompatActivity {
                       }
                     } catch (JSONException e) { e.printStackTrace(); }
                   }
-                  Logger.i("question-> " + question + "- " + "jsonOption1"+"->" + jsonOption1+"- jsonOption2" + jsonOption2 +" ->"+  jsonOption3 +" ="+  jsonOption4+ "->" +answer);
+//                  Logger.i("question-> " + question + "- " + "jsonOption1"+"->" + jsonOption1+"- jsonOption2" + jsonOption2 +" ->"+  jsonOption3 +" ="+  jsonOption4+ "->" +answer);
                   Question q1 = new Question(question, jsonOption1, jsonOption2, jsonOption3, jsonOption4,jsonOption5,answer);
                   helper.addQuestionToDB(q1);
+
                 }
-                  nextPage();
+                 showSuccessDialog();
+
               }
             }, new Response.ErrorListener() {
       @Override
       public void onErrorResponse(VolleyError error) {
         Logger.i("Internet is not there ",error.toString());
-        nextPage();
+        new MaterialDialog.Builder(WelcomeActivity.this)
+                .title("Internet is not there")
+                .content(R.string.success)
+                .positiveText(R.string.longer_positive)
+                .onPositive(new MaterialDialog.SingleButtonCallback() {
+                  @Override
+                  public void onClick(MaterialDialog dialog, DialogAction which) {
+                    // TODO
+                    dialog.dismiss();
+                  }
+                })
+                .show();
       }
     }
     );
     queue.add(postRequest);
 
 
+  }
+
+  private void showSuccessDialog() {
+    progressBar.setVisibility(View.GONE);
+    new MaterialDialog.Builder(WelcomeActivity.this)
+            .title("Database Loaded")
+            .content(R.string.success)
+            .positiveText(R.string.longer_positive)
+            .onPositive(new MaterialDialog.SingleButtonCallback() {
+              @Override
+              public void onClick(MaterialDialog dialog, DialogAction which) {
+                // TODO
+                dialog.dismiss();
+              }
+            })
+            .show();
   }
 }
