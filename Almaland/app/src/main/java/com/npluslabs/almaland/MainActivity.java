@@ -14,6 +14,8 @@ import com.arlib.floatingsearchview.FloatingSearchView;
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.npluslabs.almaland.Fragments.ConnectionsFragment;
 import com.npluslabs.almaland.Fragments.HomeFragment;
+import com.npluslabs.almaland.Fragments.MessageFragment;
+import com.npluslabs.almaland.Fragments.NotificationFragment;
 
 public class MainActivity extends AppCompatActivity {
     private FloatingSearchView mSearchView;
@@ -38,10 +40,16 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction.commit();
                     return true;
                 case R.id.navigation_message:
-                    Log.i("Wowo Messa","true");
+                    selectedFragment = new MessageFragment();
+                    fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame_layout,selectedFragment);
+                    fragmentTransaction.commit();
                     return true;
                 case R.id.navigation_notifications:
-                    Log.i("Wowo Messa","true");
+                    selectedFragment = new NotificationFragment();
+                    fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame_layout,selectedFragment);
+                    fragmentTransaction.commit();
                     return true;
                 case R.id.navigation_jobs:
                     Log.i("Wowo Messa","true");

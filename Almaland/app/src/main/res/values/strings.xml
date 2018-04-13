@@ -18,4 +18,15 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="number_of_contacts">1,327</string>
+    <string name="view_connections">View Connections</string>
+    <string name="add_contacts">Add Contacts</string>
+    <string name="no_pending_invitations">No pending invitations</string>
+    <string name="manage_all">MANAGE ALL</string>
+    <string name="android_developer">Android Developer</string>
+    <string name="person_image">person_image</string>
+    <string name="people_you_may_know">People you may know</string>
+    <string name="you_hi_mark_this_makes_it_hard_to_avoid_reducing_candidate_outreach_to_a_numbers_game_some_recruiters_have_developed_the_mindset_that_if_they_send_enough_messages_they_ll_get_results">You: Hi John, This makes it hard to avoid reducing candidate outreach to a numbers game. Some recruiters have developed the mindset that if they send enough messages, they’ll get results.</string>
+    <string name="congratulate_nisha_sharma_for_17_years_at_ibm">Congratulate Nisha Sharma <b>for 17 years at IBM </b></string>
+    <string name="say_congrats">SAY CONGRATS</string>
+    <string name="satish_kumar_gupta_viewed_your_profile">Satish Kumar Gupta <b>viewed your profile</b></string>
 </resources>

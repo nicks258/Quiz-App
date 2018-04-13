@@ -20,7 +20,7 @@
         app:floatingSearch_menu="@menu/navigation"
         app:floatingSearch_close_search_on_keyboard_dismiss="true"/>
     <FrameLayout
-        android:layout_marginTop="75sp"
+        android:layout_marginTop="65sp"
         android:layout_width="match_parent"
         android:id="@+id/frame_layout"
         android:layout_height="match_parent">
